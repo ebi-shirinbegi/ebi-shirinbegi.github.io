@@ -14,7 +14,6 @@ const ProjectCard = ({index, name, tags, description, image, source_code_link, s
         </div>
         <div className="mt-5">
           <div className="text-white font-bold text-[24px]"> {name}  
-            <a className="py-2 px-2 mx-1 text-[12px] font-400 bg-black text-[#915eff] hover:text-white rounded float-right" href={source_code_link} target="_blank" rel="noreferrer"> See Source </a>
             <a className="py-2 px-2 mx-1 text-[12px] font-400 bg-black text-[#915eff] hover:text-white rounded float-right" href={see_live_link} target="_blank" rel="noreferrer"> See Live </a>
           </div>
           <p className="mt-2 text-secondary text-[14px]"> {description} </p>

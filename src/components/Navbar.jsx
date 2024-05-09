@@ -14,9 +14,9 @@ const Navbar = () => {
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className="w-full flex justify-between items-center mx-w-7xl mx-auto">
-        <Link className="flex items-center gap-2 img-hover-zoom--slowmo" to="/" onClick={()=>{setActive(""); window.scrollTo(0,0)} }>
-          <img className="w-9 h-9 object-contain" src={logo} alt="logo" />
-           <p className="text-white font-bold cursor-pointer text[16px] flex"> Ali Akbar Sazish </p>
+        <Link className="flex items-center gap-2" to="/" onClick={()=>{setActive(""); window.scrollTo(0,0)} }>
+          
+           <p className="text-white font-bold cursor-pointer text[16px] flex"> Welcome to my portfolio </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {
@@ -29,9 +29,6 @@ const Navbar = () => {
             ))
           }
           <li className="text-whitehover:text-white font-meduim cursor-pointer text[18px]">
-          <a href={cv} download="Ali Akbar Sazish CV.pdf" target='_blank'>
-             Reusme <FaCloudDownloadAlt className="inline" />
-            </a>
           </li>
         </ul>
 
