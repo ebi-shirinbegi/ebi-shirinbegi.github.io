@@ -37,12 +37,15 @@ const Hero = () => {
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}> Ebrahim  <span className="text-[#915eff]"> Sharifi </span> </h1>
             <p className={`${styles.heroSubText} mt-1 text-white-100`}>
-            <span className="text-[#915eff] font-bold">  Software Engineer </span> <br />
+            <span className="text-[#915eff] font-bold">Software Engineer</span>
+            <br />
             Experienced Software Engineer from Afghanistan with 6+ years of experience in PHP. Proven expertise in database design, collaborative teamwork, and NLP using TensorFlow and PyTorch. I have excellent communication skills and a strong passion for continuous learning. In 2021, I received a scholarship from the China West Normal University in Sichuan to pursue a master’s degree in Software Engineering. My goal is to relocate to Europe and continue my career as a Software Engineer, leveraging my skills in both traditional software development and modern AI/ML techniques.
-
-                 <div className='black-gradient py-4 px-4 font-[12px] rounded-xl outline-none w-fit text-white shadow-md shadow-primary'> <a href={cv} download="Ebrahim_Sharifi_Resume.pdf" target='_blank'>
-             Download Reusme <FaCloudDownloadAlt className="inline" />
-            </a> </div> 
+            <br />
+            <div style={{ marginTop: '20px' }} className='black-gradient py-1.5 px-2 font-[2px] rounded-xl outline-none w-fit text-white shadow-md shadow-primary'>
+              <a href={cv} download="Ebrahim_Sharifi_Resume.pdf" target='_blank'>
+                Resume <FaCloudDownloadAlt className="inline" />
+              </a>
+            </div>
             </p>
             
                 <span className="inline flex flex-row gap-2 mt-7">

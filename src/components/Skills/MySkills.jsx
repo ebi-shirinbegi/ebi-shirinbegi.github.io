@@ -20,7 +20,7 @@ export default function MySkills() {
           {machineLearnings.map((machineLearning, index) => (
             <SkillBar
               key={index}
-              skill={machineLearning.front}
+              skill={machineLearning.mlnlp}
               percentage={machineLearning.percentage}
             />
           ))}
@@ -30,7 +30,7 @@ export default function MySkills() {
           {webAndDatabases.map((webAndDatabase, index) => (
             <SkillBar
               key={index}
-              skill={webAndDatabase.backEnd}
+              skill={webAndDatabase.web}
               percentage={webAndDatabase.percentage}
             />
           ))}

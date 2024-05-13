@@ -4,34 +4,28 @@ import close from "./close.svg";
 import cv from "./cv.pdf";
 
 import starfoods from "./company/starfoods.png";
-import addressLLC from "./company/addressLLC.png";
-import trade from "./company/trade.png";
-import education from "./company/education.png";
-import microvers from "./company/microvers.png";
+import adras from "./company/adras.png";
+import ebaa from "./company/ebaa.png";
+import raybold from "./company/raybold.jpg";
+
 
 import starfood from "./starfood.png";
 import crm from "./crm.png";
 import math from "./math.png";
-import air_pollution from "./air_pollution.png";
-import awesome_books from "./awesome_books.png";
-import book_store from "./book_store.png";
-import online_academy from "./online_academy.png";
+import eba from "./eba.png";
+
 
 export {
+  eba,
+  ebaa,
+  raybold,
+  adras,
   logo,
   menu,
   close,
   cv,
-  starfoods,
-  addressLLC,
-  trade,
-  education,
-  microvers,
   starfood,
   crm,
   math,
-  air_pollution,
-  awesome_books,
-  book_store,
-  online_academy
+  starfoods
 };

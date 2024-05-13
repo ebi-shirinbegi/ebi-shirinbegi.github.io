@@ -110,7 +110,6 @@
 }
 
 
-
 /* Button resets and style */
 button {
   margin: .5rem;
@@ -132,7 +131,7 @@ button.pulse-button {
       background: #040815;
   }
   33% {
-    background: #925ffa;
+    background: #0f0c16;
   }
   66%{
     background: #323232;

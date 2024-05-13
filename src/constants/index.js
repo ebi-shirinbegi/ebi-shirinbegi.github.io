@@ -1,6 +1,7 @@
 import {
-    adras,
     eba,
+    ebaa,
+    adras,
     raybold,
     starfood,
     crm,
@@ -23,7 +24,7 @@ import {
     {
       title: "Full Stack Engineer",
       company_name: "Education Bridge for Afghanistan - Non-Profit ",
-      icon: eba,
+      icon: ebaa,
       iconBg: "#383E56",
       date: "Nov 2021-July 2023",
       points: [
@@ -186,7 +187,6 @@ import {
         },
       ],
       image: crm,
-      
       see_live_link: "https://star4.ir",
     },
     {
@@ -207,7 +207,6 @@ import {
         },
       ],
       image: math,
-      
       see_live_link: "https://math-magicians-9om6.onrender.com/",
     },
   ];
