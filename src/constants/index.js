@@ -1,9 +1,7 @@
 import {
-    starfoods,
-    addressLLC,
-    trade,
-    education,
-    microvers,
+    adras,
+    eba,
+    raybold,
     starfood,
     crm,
     math,
@@ -25,7 +23,7 @@ import {
     {
       title: "Full Stack Engineer",
       company_name: "Education Bridge for Afghanistan - Non-Profit ",
-      icon: starfoods,
+      icon: eba,
       iconBg: "#383E56",
       date: "Nov 2021-July 2023",
       points: [
@@ -36,7 +34,7 @@ import {
     {
       title: "Web Developer",
       company_name: "Raybold  Software & Graphic Design Company - Startup",
-      icon: addressLLC,
+      icon: raybold,
       iconBg: "#E6DEDD",
       date: "Sep 2020 - Dec 2021",
       points: [
@@ -48,7 +46,7 @@ import {
     {
       title: "Web Developer",
       company_name: "ADRAS (Afghanistan Development and Registry and Addressing Services)",
-      icon: trade,
+      icon: adras,
       iconBg: "#383E56",
       date: "May 2017 - Aug 2020",
       points: [
@@ -60,35 +58,51 @@ import {
   ];
   
 
-  const frontEndSkills = [
-      { "front": "JavaScript", "percentage": 85 },
-      { "front": "TypeScript", "percentage": 70 },
-      { "front": "React & Redux Toolkit", "percentage": 80 },
-      { "front": "jQuery & Ajax", "percentage": 75 },
-      { "front": "Tailwind & Bootstrap", "percentage": 70 },
-      { "front": "HTML & CCS", "percentage": 95 }
+  const machineLearnings = [
+      { "mlnlp": "Python", "percentage": 85 },
+      { "mlnlp": "TensolFlow", "percentage": 75 },
+      { "mlnlp": "PyTorch", "percentage": 70 },
+      { "mlnlp": "NumPy", "percentage": 65 },
+      { "mlnlp": "Matplotlib", "percentage": 80 },
+      { "mlnlp": "Pandas", "percentage": 85 },
+      { "mlnlp": "spaCy", "percentage": 85 },
+      { "mlnlp": "NLTK", "percentage": 85 },
   ];
 
-  const backEndSkills = [
-      { "backEnd": "PHP", "percentage": 55 },
-      { "backEnd": "Laravel", "percentage": 60 },
-      { "backEnd": "SQL", "percentage": 50 },
-      { "backEnd": "WordPress", "percentage": 60 },
+  const webAndDatabases = [
+      { "web": "PHP", "percentage": 80 },
+      { "web": "Laravel", "percentage": 70 },
+      { "web": "SQL", "percentage": 70 },
+      { "web": "JavaScript", "percentage": 55 },
+      { "web": "jQuery & Ajax", "percentage": 75 },
+      { "web": "Tailwind & Bootstrap", "percentage": 70 },
+      { "web": "HTML & CCS", "percentage": 95 }
   ];
 
 
   const toolsAndMethods = [
+      { "tools": "SPLID Principles ", "percentage": 90 },
+      { "tools": "Design Patterns", "percentage": 70 },  
       { "tools": "Git & GitHub", "percentage": 80 },
-      { "tools": "API", "percentage": 75 },
-      { "tools": "Responsive Dev", "percentage": 90 },
-      { "tools": "Chrome Dev Tools", "percentage": 80 },
+      { "tools": "REST API", "percentage": 75 },
+      { "tools": "PHPUnit", "percentage": 75 },
+      { "tools": "Docker", "percentage": 75 },
+      
+       
+      
   ];
 
   const softSkills = [
       { "soft": "Problem solving", "percentage": 80 },
-      { "soft": "Team work", "percentage": 80 },
-      { "soft": "Mentoring", "percentage": 80 },
-      { "soft": "Remote Pair-Programming", "percentage": 80 },
+      { "soft": "Critical Thinking", "percentage": 80 },
+      { "soft": "Communication", "percentage": 90 },
+      { "soft": "Teamwork", "percentage": 90 },
+      { "soft": "Attention to detail", "percentage": 90 },
+      { "soft": "Time management", "percentage": 85 },
+      { "soft": "Creativity", "percentage": 80 },
+      { "soft": "Patience", "percentage": 90 },
+      { "soft": "Diversity awareness", "percentage": 95 },
+      
   ];
   
   const projects = [
@@ -167,4 +181,4 @@ import {
     },
   ];
   
-  export {experiences, frontEndSkills, backEndSkills, toolsAndMethods, softSkills, projects };
+  export {experiences, machineLearning, webAndDatabase, toolsAndMethods, softSkills, projects };

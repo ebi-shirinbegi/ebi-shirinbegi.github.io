@@ -44,10 +44,10 @@ const Navbar = () => {
                     <a href={`#${link.id}`}> {link.title} </a>
                   </li>
               )) }
-               <li className="text-whitehover:text-white font-meduim cursor-pointer text[18px]">
+               {/* <li className="text-whitehover:text-white font-meduim cursor-pointer text[18px]">
                <a href={cv} download="Ali Akbar Sazish CV.pdf" target='_blank'>
                      Reusme <FaCloudDownloadAlt className="inline" /> </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

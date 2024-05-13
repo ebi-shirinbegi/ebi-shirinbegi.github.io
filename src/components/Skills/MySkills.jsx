@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { textVariant } from '../../utils/motion';
 import SkillBar from "./SkillBars";
 import "./MySkills.css";
-import { frontEndSkills, backEndSkills, toolsAndMethods, softSkills } from '../../constants';
+import { machineLearnings, webAndDatabases, toolsAndMethods, softSkills } from '../../constants';
 import {styles} from "../../styles";
 
 export default function MySkills() {
@@ -16,22 +16,22 @@ export default function MySkills() {
       </motion.div>
       <div className="skills">
         <div className="technical-skills">
-          <h3 className="font-bold text-[24px] sm:mt-5"> Front-End </h3>
-          {frontEndSkills.map((frontSkill, index) => (
+          <h3 className="font-bold text-[24px] sm:mt-5"> AI/ML/NLP </h3>
+          {machineLearnings.map((machineLearning, index) => (
             <SkillBar
               key={index}
-              skill={frontSkill.front}
-              percentage={frontSkill.percentage}
+              skill={machineLearning.front}
+              percentage={machineLearning.percentage}
             />
           ))}
         </div>
         <div className="technical-skills">
-        <h3 className="font-bold text-[24px] sm:mt-5"> Back-End </h3>
-          {backEndSkills.map((backSkill, index) => (
+        <h3 className="font-bold text-[24px] sm:mt-5"> Web & Database </h3>
+          {webAndDatabases.map((webAndDatabase, index) => (
             <SkillBar
               key={index}
-              skill={backSkill.backEnd}
-              percentage={backSkill.percentage}
+              skill={webAndDatabase.backEnd}
+              percentage={webAndDatabase.percentage}
             />
           ))}
         </div>
@@ -47,7 +47,7 @@ export default function MySkills() {
           ))}
         </div>
         <div className=" personal-skills">
-          <h3 className="font-bold text-[24px] sm:mt-5"> Professional </h3>
+          <h3 className="font-bold text-[24px] sm:mt-5"> Soft Skills </h3>
           {softSkills.map((softSkill, index) => (
             <SkillBar
               key={index}
