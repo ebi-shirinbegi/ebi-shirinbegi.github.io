@@ -87,6 +87,7 @@ import {
       { "tools": "REST API", "percentage": 75 },
       { "tools": "PHPUnit", "percentage": 75 },
       { "tools": "Docker", "percentage": 75 },
+      { "tools": "Postman", "percentage": 70 },
       
        
       
@@ -106,6 +107,36 @@ import {
   ];
   
   const projects = [
+    {
+      name: "EBA",
+      description: "Education Bridge for Afghanistan (EBA) is a non-profit organization established by a group of volunteer education activists in Afghanistan and around the world. EBA provides a practical, indigenous, online education platform for secondary-level students in Afghanistan, especially for girls who are currently excluded from school. In collaboration with members of the Afghan diaspora, international philanthropists and women’s rights activists, we have launched a programme to provide free access to online school-level education for girls in Afghanistan.",
+      tags: [
+        
+        { name: "PHP",
+          color: "pink-text-gradient",
+        },
+        { name: "JavScript",
+          color: "blue-text-gradient",
+        },
+        { name: "jQuery",
+          color: "green-text-gradient",
+        },
+        {name: "Bootstrap",
+          color: "pink-text-gradient",
+        },
+        {name: "CSS",
+          color: "blue-text-gradient",
+        },
+        {  name: "Laravel",
+          color: "green-text-gradient",
+        },
+        { name: "SQL Server",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: eba,
+      see_live_link: "https://www.eba.ac/",
+    },
     {
       name: "Starfoods",
       description:"Starfoods demonstrates my web development skills, emphasizing user-friendly interfaces, smooth shopping experiences, secure payments, and quick shipping. Explore my work to see how I can enhance your next project.",
@@ -181,4 +212,4 @@ import {
     },
   ];
   
-  export {experiences, machineLearning, webAndDatabase, toolsAndMethods, softSkills, projects };
+  export {experiences, machineLearnings, webAndDatabases, toolsAndMethods, softSkills, projects };
