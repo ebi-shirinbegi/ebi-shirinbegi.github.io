@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {FaFacebook, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter} from 'react-icons/fa';
+import {FaGithub, FaLinkedinIn, FaTwitter} from 'react-icons/fa';
 import { MdOutgoingMail } from "react-icons/md";
 import {cv} from '../assets';
 import {FaCloudDownloadAlt } from 'react-icons/fa';
@@ -52,10 +52,10 @@ const Hero = () => {
                       <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://www.linkedin.com/in/ebrahim-sharifi-086323211/"> <FaLinkedinIn /> </a>
                       <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://github.com/ebi-shirinbegi"> <FaGithub /> </a>
                       <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://twitter.com/BegiEbi"> <FaTwitter /> </a>
-                      {/* <span onClick={copyGmailId} className="black-gradient  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900">
+                       <span onClick={copyGmailId} className="black-gradient  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900">
                         <span id="myGmail" className="hidden"> Sharifi.ebrahim@outlook.com </span>
                         <MdOutgoingMail />
-                      </span> */}
+                      </span> 
                   </span>
             
                 <p className={`${styles.heroSubText} mt-6 text-white-100`}> Email:  <span className="text-[#915eff]"> Sharifi.ebrahim@outlook.com </span> </p>
