@@ -49,7 +49,6 @@ const Hero = () => {
             </p>
             
                 <span className="inline flex flex-row gap-2 mt-7">
-                      <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://www.linkedin.com/in/ebrahim-sharifi-086323211/"> <FaLinkedinIn /> </a>
                       <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://github.com/ebi-shirinbegi"> <FaGithub /> </a>
                       <a className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900" target="_blank" href="https://twitter.com/BegiEbi"> <FaTwitter /> </a>
                        <span onClick={copyGmailId} className="black-gradient  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer inline hover:text-teal-900">
