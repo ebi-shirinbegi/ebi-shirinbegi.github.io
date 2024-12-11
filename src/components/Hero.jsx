@@ -61,13 +61,15 @@ const Hero = () => {
                 <p className={`${styles.heroSubText} mt-6 text-white-100`}> Email:  <span className="text-[#915eff]"> Sharifi.ebrahim@outlook.com </span> </p>
                 <p className={`${styles.heroSubText} text-white-100`}> Phone:  <span className="text-[#915eff]"> +8617608171756 </span> </p>
           
-                <fieldset>
+                {/* <fieldset>
                   <legend><span> My Hobbies </span></legend>
-                      <button className="pulse-button"> Playing video games  </button>
-                      <button className="pulse-button"> Watching movies  </button>
-                      <button className="pulse-button"> Football  </button>
+                      <button className="pulse-button"> Running HuggingFace models for personal projects  </button>
+                      <button className="pulse-button"> Tracking developments in AI and NLP  </button>
+                      <button className="pulse-button"> Reading recent AI and machine learning papers  </button>
                       <button className="pulse-button"> Playing piano  </button>
-              </fieldset>
+                    
+
+              </fieldset> */}
         </div>
       </div>
     </section>
