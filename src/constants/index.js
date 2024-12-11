@@ -2,6 +2,7 @@ import {
     eba,
     ebaa,
     adras,
+    cwnu,
     raybold,
     starfood,
     crm,
@@ -22,26 +23,17 @@ import {
 
   const experiences = [
     {
-      title: "Full Stack Engineer",
-      company_name: "Education Bridge for Afghanistan - Non-Profit ",
-      icon: ebaa,
-      iconBg: "#383E56",
-      date: "Nov 2021-July 2023",
-      points: [
-        "Collaborating with a team of 9 web developers and designers to design and develop a management information system for student and teacher registration, enrolment, and record-tracking.",
-        "Played a key role from prototyping to the final release of the system in all development stages which is currently being used by 1,400 students and 65 teachers",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Raybold  Software & Graphic Design Company - Startup",
+      title: "Junior Researcher",
+      company_name: "China West Normal University",
       icon: raybold,
       iconBg: "#E6DEDD",
-      date: "Sep 2020 - Dec 2021",
+      date: "Feb 2023 - Jul 2024",
       points: [
-        "Developed software for hospital management of all administrative parts, including finance and pharmacy management, in collaboration with a team of 6 developers.",
-        "Led the development of the software, from initial planning to final implementation, resulting in its successful application and currently being used by 14 hospitals.",
-        "The software contributed to the business success of the company and increased its popularity about 50% among hospitals, ultimately solidifying its reputation as a provider of high-quality, innovative solutions.",
+        "Developed HazNERC dataset with 100,000+ annotated tokens, achieving 87% F1-score in NER tasks.",
+        "Implemented custom BERT-based models improving multilingual performance by 23% compared to baseline.",
+        "Conducted systematic review of 200+ NLP papers, identifying key trends in low-resource language processing.",
+        "Reduced model training time by 40% through optimization of data preprocessing pipeline.",
+        "Tech Stack: Python, PyTorch, HuggingFace Transformers, BERT, LLaMA, NLTK, spaCy",
       ],
     },
     {
@@ -49,11 +41,16 @@ import {
       company_name: "ADRAS (Afghanistan Development and Registry and Addressing Services)",
       icon: adras,
       iconBg: "#383E56",
-      date: "May 2017 - Aug 2020",
+      date: "May 2017 - Aug 2021",
       points: [
-        "Contributed to the development of a large software system that centralizes administrative operations of governmental civil ORGs across 34 provinces. The system focused on employee records and letter management in ministries and their departments.",
-        "Independently created 3 modules from scratch and participated as a team member on 5 additional projects.",
-        "Played an essential role as part of a team of 189 IT and web developers in the successful deployment of the software to over 3,000 active users.",
+        "Developed 3 core modules, improving functionality for 3,000+ users across 34 provinces.",
+        "Optimized database queries, reducing system response time by 45% and enhancing overall performance.",
+        "Designed and implemented scalable REST APIs to handle 10,000+ daily requests efficiently.",
+        "Introduced automated testing and set up a CI/CD pipeline, cutting bug detection time by 60% and reducing deployment time by 70%.",
+        "Built a real-time monitoring system with 99.9% uptime, ensuring consistent service availability.",
+        "Mentored 5 junior developers, increasing team productivity by 25% and promoting a collaborative environment.",
+        "Tech Stack: PHP, Laravel, JavaScript, React.js, MySQL, Docker, Git, REST APIs",
+        
       ],
     },
   ];
@@ -188,26 +185,6 @@ import {
       ],
       image: crm,
       see_live_link: "https://star4.ir",
-    },
-    {
-      name: "Math",
-      description: "Math magicians is a website for all fans of mathematics. It allows user to make simple calculations and read random math related qoutes.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "HTML",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: math,
-      see_live_link: "https://math-magicians-9om6.onrender.com/",
     },
   ];
   

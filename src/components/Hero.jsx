@@ -39,7 +39,7 @@ const Hero = () => {
             <p className={`${styles.heroSubText} mt-1 text-white-100`}>
             <span className="text-[#915eff] font-bold">Software Engineer</span>
             <br />
-            Experienced Software Engineer from Afghanistan with 6+ years of experience in PHP. Proven expertise in database design, collaborative teamwork, and NLP using TensorFlow and PyTorch. I have excellent communication skills and a strong passion for continuous learning. In 2021, I received a scholarship from the China West Normal University in Sichuan to pursue a master’s degree in Software Engineering. My goal is to relocate to Europe and continue my career as a Software Engineer, leveraging my skills in both traditional software development and modern AI/ML techniques.
+            M.S. graduate specializing in Natural Language Processing (NLP) and Machine Learning with expertise in low-resource languages. Transitioned from four years of industry experience as a web developer for large-scale government projects to academic research for understanding AI fundamentals, focusing on fine-tuning Large Language Models (LLMs) for multilingual applications. Achieved notable improvements in Named Entity Recognition (NER) and Question Answering (QA) tasks for Persian and Hazaragi languages, combining technical expertise with practical, implementation-driven research.
             <br />
             <div style={{ marginTop: '20px' }} className='black-gradient py-1.5 px-2 font-[2px] rounded-xl outline-none w-fit text-white shadow-md shadow-primary'>
               <a href={cv} download="Ebrahim_Sharifi_Resume.pdf" target='_blank'>
