@@ -2,6 +2,7 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
+import { experiences } from '../constants'; // Make sure this path matches your project structure
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -56,8 +57,12 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const Experience = () => {
+  if (!experiences?.length) {
+    return null; // Don't render anything if experiences data is not available
+  }
+
   return (
-    <section className="relative w-full mx-auto pt-16 sm:pt-24 md:pt-32"> {/* Adjusted top padding */}
+    <section className="relative w-full mx-auto pt-16 sm:pt-24 md:pt-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
