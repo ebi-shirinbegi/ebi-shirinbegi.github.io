@@ -1,207 +1,58 @@
-import { site, WorkItem } from "@/lib/site";
+import type { ReactNode } from "react";
 
-export function Chip({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
-  return <span className={`chip ${dark ? "chip-dark" : ""}`}>{children}</span>;
-}
-
-export function Nav() {
-  const links = [
-    ["Home", "/"],
-    ["About", "/about/"],
-    ["Projects", "/projects/"],
-    ["Contact", "/contact/"],
-  ];
+export function SectionHeading({ index, title }: { index: string; title: string }) {
   return (
-    <header>
-      <nav className="wrap flex items-center justify-between py-5">
-        <a href="/" className="flex items-center gap-2 font-semibold">
-          <span className="font-display text-2xl leading-none">{site.shortName}</span>
-          <span className="hidden sm:inline text-sm">Ebrahim Sharifi</span>
-        </a>
-        <div className="hidden md:flex items-center gap-7 text-sm text-muted">
-          {links.map(([label, href]) => (
-            <a key={href} href={href} className="hover:text-ink transition-colors">
-              {label}
-            </a>
-          ))}
-        </div>
-        <a href="/contact/" className="btn">
-          Get in touch
-        </a>
-      </nav>
-    </header>
+    <h2 className="mb-8 flex items-baseline gap-3 font-mono text-xs tracking-[0.2em] text-accent">
+      <span className="text-faint">{index}</span>
+      <span className="uppercase">{title}</span>
+      <span aria-hidden className="ml-2 h-px flex-1 bg-line" />
+    </h2>
   );
 }
 
-export function SectionHead({
-  chip,
-  title,
-  sub,
-  center = false,
-}: {
-  chip: string;
-  title: string;
-  sub?: string;
-  center?: boolean;
-}) {
+export function ExternalTitleLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <div className={`mb-10 ${center ? "text-center" : ""}`}>
-      <Chip>{chip}</Chip>
-      <h2 className="font-display text-4xl md:text-5xl mt-4">{title}</h2>
-      {sub && <p className={`mt-3 text-muted max-w-xl ${center ? "mx-auto" : ""}`}>{sub}</p>}
-    </div>
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="group/link inline-flex items-baseline gap-1.5 font-medium text-body transition-colors hover:text-accent"
+    >
+      {children}
+      <ArrowUpRight className="h-3.5 w-3.5 flex-none self-center text-faint transition-all group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 group-hover/link:text-accent" />
+    </a>
   );
 }
 
-export function Arrow() {
+export function ArrowUpRight({ className }: { className?: string }) {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <path d="M7 17 17 7M7 7h10v10" />
     </svg>
   );
 }
 
-export function AvailabilityCard() {
+export function GitHubIcon({ className }: { className?: string }) {
   return (
-    <div className="smoke p-7">
-      <div className="orb mb-6">
-        <Arrow />
-      </div>
-      <div className="flex items-center gap-2.5">
-        <span className="dot" />
-        <p className="font-medium text-lg">{site.availability}</p>
-      </div>
-      <p className="text-sm text-ondarkmuted mt-1">Based in {site.location}, working anywhere</p>
-      <div className="mt-7 space-y-4 text-sm">
-        <div className="flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-          <span className="text-ondarkmuted">Email</span>
-          <a href={`mailto:${site.email}`} className="hover:underline underline-offset-4 break-all text-right">
-            {site.email}
-          </a>
-        </div>
-        <div className="flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-          <span className="text-ondarkmuted">GitHub</span>
-          <a href={site.github} target="_blank" rel="noreferrer" className="hover:underline underline-offset-4">
-            ebi-shirinbegi
-          </a>
-        </div>
-        <div className="flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-          <span className="text-ondarkmuted">LinkedIn</span>
-          <a href={site.linkedin} target="_blank" rel="noreferrer" className="hover:underline underline-offset-4">
-            mohammad-ebrahim-sharifi
-          </a>
-        </div>
-      </div>
-    </div>
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.91c.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a11 11 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.2.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+    </svg>
   );
 }
 
-export function WorkCard({ item }: { item: WorkItem }) {
-  const inner = (
-    <>
-      <div className={`rounded-t-[1.2rem] p-7 pb-6 ${item.upcoming ? "bg-dark text-ondark" : "bg-canvas"}`}>
-        <p className="font-mono text-xs tracking-wider opacity-70">{item.tag}</p>
-        <h3 className="font-display text-3xl mt-2">{item.title}</h3>
-      </div>
-      <div className="p-7 pt-5">
-        <p className="text-sm text-muted leading-relaxed">{item.summary}</p>
-        {item.points && (
-          <ul className="mt-4 space-y-1.5 font-mono text-xs">
-            {item.points.map((p) => (
-              <li key={p}>{p}</li>
-            ))}
-          </ul>
-        )}
-        {item.href && (
-          <p className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium">
-            {item.href.includes("github") ? "View on GitHub" : "Visit"} <Arrow />
-          </p>
-        )}
-        {item.upcoming && (
-          <p className="mt-5 inline-flex items-center gap-2 text-sm font-medium">
-            <span className="dot" /> In preparation
-          </p>
-        )}
-      </div>
-    </>
-  );
-  const cls = "panel panel-hover overflow-hidden block";
-  return item.href ? (
-    <a href={item.href} target="_blank" rel="noreferrer" className={cls}>
-      {inner}
-    </a>
-  ) : (
-    <div className={cls}>{inner}</div>
+export function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z" />
+    </svg>
   );
 }
 
-export function CtaBand() {
+export function MailIcon({ className }: { className?: string }) {
   return (
-    <section className="wrap py-20">
-      <div className="grid gap-6 md:grid-cols-[3fr_2fr] items-stretch">
-        <div className="panel p-9 flex flex-col justify-center">
-          <Chip>
-            <span className="dot" /> Open to collaborate
-          </Chip>
-          <h2 className="font-display text-4xl md:text-5xl mt-5">
-            Working on something for the languages the datasets forgot?
-          </h2>
-          <p className="mt-4 text-muted max-w-lg">
-            Research collaboration, low-resource NLP, speech, corpora, or just an interesting
-            problem. My inbox is open.
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href="/contact/" className="btn">
-              Get in touch
-            </a>
-            <a href="/projects/" className="btn btn-ghost">
-              View projects
-            </a>
-          </div>
-        </div>
-        <AvailabilityCard />
-      </div>
-    </section>
-  );
-}
-
-export function Footer() {
-  return (
-    <footer className="wrap pb-6">
-      <div className="panel overflow-hidden">
-        <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr] p-9">
-          <div>
-            <p className="font-display text-2xl">{site.shortName}</p>
-            <p className="mt-3 text-sm text-muted max-w-xs leading-relaxed">
-              Corpora, speech, and NLP engineering for underrepresented languages.
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-medium mb-3">Pages</p>
-            <ul className="space-y-2 text-sm text-muted">
-              <li><a href="/" className="hover:text-ink">Home</a></li>
-              <li><a href="/about/" className="hover:text-ink">About</a></li>
-              <li><a href="/projects/" className="hover:text-ink">Projects</a></li>
-              <li><a href="/contact/" className="hover:text-ink">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <p className="text-sm font-medium mb-3">Elsewhere</p>
-            <ul className="space-y-2 text-sm text-muted">
-              <li><a href={site.github} target="_blank" rel="noreferrer" className="hover:text-ink">GitHub</a></li>
-              <li><a href={site.linkedin} target="_blank" rel="noreferrer" className="hover:text-ink">LinkedIn</a></li>
-              <li><a href={`mailto:${site.email}`} className="hover:text-ink">Email</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="px-6 overflow-hidden select-none" aria-hidden="true">
-          <p className="watermark text-center">SHARIFI</p>
-        </div>
-        <div className="bg-dark text-ondarkmuted text-xs px-9 py-4 flex flex-col sm:flex-row justify-between gap-2">
-          <span>{site.name} · {site.location}</span>
-          <span>Built with Next.js, no trackers</span>
-        </div>
-      </div>
-    </footer>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+      <path d="m3 6 9 7 9-7" />
+    </svg>
   );
 }

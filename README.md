@@ -1,50 +1,35 @@
-# Mohammad Ebrahim Sharifi, portfolio (v2, Sevora-style)
+# Mohammad Ebrahim Sharifi — portfolio (v3)
 
-Next.js 14 static export + Tailwind. Four pages: Home, About, Projects,
-Contact. Ships complete HTML for every route.
-
-## Deploy (replaces the live site)
-
-From your existing local repo folder:
-
-```bash
-# copy the new files over the repo, replacing app/, components/, lib/, public/
-git add -A
-git commit -m "Redesign: Sevora-style multi-page site"
-git push origin main
-```
-
-GitHub Actions rebuilds and deploys automatically. Nothing in the
-workflow or config changed.
+Single-page portfolio. Next.js 14 static export + Tailwind. Dark,
+typography-first design: fixed sidebar with name / nav / socials, scrolling
+content column (About, Experience, Projects, How I work, Contact).
 
 ## Where things live
 
-- All content: `lib/site.ts` (VERIFY marks = replace with real repo URLs)
-- Shared layout pieces: `components/ui.tsx`
-- Animated pieces (counters, NER demo, waveform, project filter):
-  `components/client.tsx`
-- Design tokens: `app/globals.css` and `tailwind.config.ts`
+- **All content:** `lib/site.ts` (single source of truth; VERIFY marks =
+  replace with real repo URLs)
+- **The page:** `app/page.tsx`
+- **Interactive bits** (scroll-aware nav, copy-email): `components/client.tsx`
+- **Icons & small pieces:** `components/ui.tsx`
+- **Design tokens:** `app/globals.css` + `tailwind.config.ts`
+- Old routes (`/about`, `/projects`, `/contact`) redirect to the matching
+  section on the home page.
 
-## Contact form, one-time activation
+## Develop
 
-The form posts through formsubmit.co to your email. The FIRST submission
-triggers a confirmation email to you; click the link once and the form is
-live. Until then, the direct email link under the form works regardless.
-If you ever change your address in `lib/site.ts`, you re-activate once.
+```bash
+npm install
+npm run dev
+```
 
-## Notes
+## Deploy
 
-- No Article/blog page yet, deliberately: the nav stays honest until you
-  have two posts worth reading. Adding it later is one folder.
-- The word "Hazaragi" appears nowhere; announcing later is a 3-line edit
-  in `lib/site.ts`.
-- Fonts are free equivalents of the template's faces: Instrument Serif,
-  Inter, JetBrains Mono.
+Push to `main`; GitHub Actions builds the static export and deploys to
+GitHub Pages automatically (`.github/workflows/deploy.yml`).
 
 ## Later upgrades
 
 1. Custom domain: add `CNAME` file to `public/`, update `site.url`.
-2. CV download: drop `cv.pdf` into `public/`, add a nav link.
-3. Article page when you have posts.
-4. Persian interface toggle (RTL), the strongest design statement
-   available for this subject.
+2. CV download: drop `cv.pdf` into `public/`, add a link in the sidebar.
+3. Regenerate `public/og.png` to match the dark design.
+4. Persian interface toggle (RTL).

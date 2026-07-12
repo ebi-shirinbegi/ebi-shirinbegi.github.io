@@ -5,20 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "var(--canvas)",
-        card: "var(--card)",
-        ink: "var(--ink)",
+        bg: "var(--bg)",
+        panel: "var(--panel)",
+        body: "var(--text)",
         muted: "var(--muted)",
-        line: "var(--border)",
-        dark: "var(--dark)",
-        ondark: "var(--on-dark)",
-        ondarkmuted: "var(--on-dark-muted)",
-        live: "var(--live)"
+        faint: "var(--faint)",
+        line: "var(--line)",
+        accent: "var(--accent)",
+        accent2: "var(--accent2)",
+        live: "var(--green)"
       },
       fontFamily: {
-        display: ["Instrument Serif", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"]
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"]
       }
     }
   },

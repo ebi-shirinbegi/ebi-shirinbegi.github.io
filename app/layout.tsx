@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -34,7 +38,7 @@ const personJsonLd = {
   url: site.url,
   email: `mailto:${site.email}`,
   jobTitle: "Computational Linguistics Student",
-  affiliation: { "@type": "CollegeOrUniversity", name: "Universit\u00e9 Paris Cit\u00e9" },
+  affiliation: { "@type": "CollegeOrUniversity", name: "Université Paris Cité" },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "China West Normal University" },
     { "@type": "CollegeOrUniversity", name: "Kabul University" },
@@ -45,20 +49,14 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <body className="bg-canvas text-ink font-sans antialiased">{children}</body>
+      <body className="bg-bg text-body font-sans antialiased">{children}</body>
     </html>
   );
 }
